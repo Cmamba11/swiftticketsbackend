@@ -10,7 +10,7 @@
     "start": "tsx server.ts",
     "build": "npx prisma generate && vite build",
     "postinstall": "npx prisma generate || true"
-  }
+  
 }
 
   "dependencies": {
