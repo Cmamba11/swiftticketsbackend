@@ -3,13 +3,16 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+
+ {
   "scripts": {
     "dev": "tsx server.ts",
     "start": "tsx server.ts",
-    "build": "npx prisma generate",
-    "clean": "rm -rf dist",
-    "lint": "tsc --noEmit"
-  },
+    "build": "npx prisma generate && vite build",
+    "postinstall": "npx prisma generate || true"
+  }
+}
+
   "dependencies": {
     "@google/genai": "^1.48.0",
     "@prisma/client": "^6.2.1",
